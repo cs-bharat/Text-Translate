@@ -59,6 +59,7 @@ function App() {
       }
     })();
   }, [data]);
+
   return (
 
     <div className="min-h-screen min-w-screen bg-[#22223B] text-white p-2 ">
