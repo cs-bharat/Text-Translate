@@ -62,26 +62,29 @@ function App() {
 
   return (
 
-    <div className="min-h-screen min-w-screen bg-[#22223B] text-white p-2 ">
-      <h1 className="text-[#C9ADA7] text-3xl text-center font-bold">
+    <div className="min-h-screen min-w-screen bg-gradient-to-r from-slate-900 to-slate-950 text-white p-2 ">
+      <h1 className="text-[#C9ADA7] text-7xl shadow-md shadow-gray-800 text-center font-bold">
         Translate
       </h1>
       
-      <div className="flex flex-col justify-center  gap-10 max-w-7xl mx-auto">
-      <div className="flex justify-between mt-10">
+      <div className="flex flex-col justify-center  gap-10 max-w-7xl mx-auto ">
+      <div className="flex justify-between mt-10  outline-none">
         <textarea
-          className="w-[600px] h-[400px] bg-transparent border-[1px] border-white/40 rounded-3xl p-4 "
+          className="w-[600px] h-[400px] bg-transparent border-[1px] border-white/40 rounded-3xl p-4
+            shadow-lg  shadow-orange-200  "
           type="text"
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
         />
-        <p className="w-[600px] h-[400px] bg-transparent border-[1px] border-white/40 rounded-3xl p-4">
+        <p className=" shadow-lg  shadow-orange-800 w-[600px]  h-[400px] bg-transparent border-[1px] border-white/40 rounded-3xl p-4
+         ">
           {text}
         </p>
       </div>
-
-      <button onClick={getData} className="bg-[#1985a1] py-2 px-4  rounded-3xl  text-xl w-full hover:bg-[#1f7a8c]">Translate</button>
+      
+      <button onClick={getData} className=" bg-gradient-to-r from-orange-400 to-orange-700 font-semibold py-2 px-4  rounded-3xl  text-xl w-full ">Translate</button>
     </div>
+
     </div>
   );
 }
