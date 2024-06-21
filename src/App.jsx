@@ -9,6 +9,7 @@ function App() {
   //   setCount(count + 1);
   //   console.log("clicked",count)
   // }
+
   const [text, setText] = useState("");
   const [inputText, setInputText] = useState("My name is Bharat and I am from India, also I speak hindi");
   const [data, setData] = useState(
@@ -66,24 +67,26 @@ function App() {
       <h1 className="text-[#C9ADA7] text-7xl shadow-md shadow-gray-800 text-center font-bold">
         Translate
       </h1>
-      
-      <div className="flex flex-col justify-center  gap-10 max-w-7xl mx-auto ">
-      <div className="flex justify-between mt-10  outline-none">
-        <textarea
-          className="w-[600px] h-[400px] bg-transparent border-[1px] border-white/40 rounded-3xl p-4
-            shadow-lg  shadow-orange-200  "
-          type="text"
-          value={inputText}
-          onChange={(e) => setInputText(e.target.value)}
-        />
-        <p className=" shadow-lg  shadow-orange-800 w-[600px]  h-[400px] bg-transparent border-[1px] border-white/40 rounded-3xl p-4
-         ">
-          {text}
-        </p>
+
+      <div className="flex flex-col justify-center gap-10 max-w-7xl mx-auto">
+        <div className="flex justify-between mt-10 outline-none sm:gap-6 ">
+              <textarea
+                className="w-[600px] h-[400px] bg-transparent border-[1px] border-white/40 rounded-3xl p-4 
+                shadow-lg  shadow-orange-200"
+                type="text"
+                value={inputText}
+                onChange={(e) => setInputText(e.target.value)}
+              />
+           
+              <p className=" shadow-lg  shadow-orange-800 w-[600px]  h-[400px] bg-transparent border-[1px] border-white/40 rounded-3xl p-4
+               ">
+               {text}
+               </p>    
+        </div>
+
+        <button onClick={getData} className=" bg-gradient-to-r from-orange-400 to-orange-700 font-semibold py-2 px-4  rounded-3xl  text-xl w-full 
+       ">Translate</button>
       </div>
-      
-      <button onClick={getData} className=" bg-gradient-to-r from-orange-400 to-orange-700 font-semibold py-2 px-4  rounded-3xl  text-xl w-full ">Translate</button>
-    </div>
 
     </div>
   );
