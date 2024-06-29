@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { conf } from "./config/conf";
 
+
 function App() {
   // const [count, setCount] = useState(12)
   // function inc(){
@@ -63,25 +64,32 @@ function App() {
 
   return (
 
-    <div className="min-h-screen min-w-screen bg-gradient-to-r from-slate-900 to-slate-950 text-white p-2 ">
+    <div className="min-h-screen min-w-screen] bg-gradient-to-r from-slate-900 to-slate-950 text-white p-2 ">
       <h1 className="text-[#C9ADA7] text-7xl shadow-md shadow-gray-800 text-center font-bold">
         Translate
       </h1>
 
       <div className="flex flex-col justify-center gap-10 max-w-7xl mx-auto">
-        <div className="flex justify-between mt-10 outline-none sm:gap-6 ">
+
+        <div className="flex justify-center items-center flex-wrap mt-10 outline-none sm:gap-6 ">
+            
+            <div className="w-[600px] h-[400px] m-2 ">
               <textarea
-                className="w-[600px] h-[400px] bg-transparent border-[1px] border-white/40 rounded-3xl p-4 
-                shadow-lg  shadow-orange-200"
+                className="w-full relative h-full bg-transparent border-[1px] border-white/40 rounded-3xl p-4 
+                shadow-lg  shadow-orange-200 "
                 type="text"
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
               />
-           
-              <p className=" shadow-lg  shadow-orange-800 w-[600px]  h-[400px] bg-transparent border-[1px] border-white/40 rounded-3xl p-4
+           </div>
+
+           <div className="w-[600px]  h-[400px] m-2">
+              <p className=" shadow-lg w-full h-full relative shadow-orange-800 bg-transparent border-[1px] border-white/40 rounded-3xl p-4
                ">
                {text}
-               </p>    
+               </p>  
+            </div>
+ 
         </div>
 
         <button onClick={getData} className=" bg-gradient-to-r from-orange-400 to-orange-700 font-semibold py-2 px-4  rounded-3xl  text-xl w-full 
